@@ -2,11 +2,14 @@
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { useState } from "react"
 import { Flower2 } from "lucide-react"
 
-export function DashboardHeader() {
-  const [selectedTab, setSelectedTab] = useState("transactions")
+interface DashboardHeaderProps {
+  selectedTab: string
+  onTabChange: (tab: string) => void
+}
+
+export function DashboardHeader({ selectedTab, onTabChange }: DashboardHeaderProps) {
   return (
     <header className=" py-5 relative overflow-hidden">
       {/* Background texture overlay */}
@@ -29,7 +32,7 @@ export function DashboardHeader() {
           <div className="bg-[#1F375166] rounded-full py-[7px] px-[8px] flex items-center border gap-2 border-slate-600/30">
             <Button
               variant="ghost"
-              onClick={() => setSelectedTab("mining")}
+              onClick={() => onTabChange("mining")}
               className={`rounded-full px-4 py-3 h-auto transition-all duration-200 ${selectedTab === "mining"
                   ? "text-white shadow-lg border border-slate-600"
                   : "text-slate-300 hover:text-white hover:bg-slate-600/50 border border-transparent"
@@ -42,7 +45,7 @@ export function DashboardHeader() {
             </Button>
             <Button
               variant="ghost"
-              onClick={() => setSelectedTab("buy")}
+              onClick={() => onTabChange("buy")}
               className={`rounded-full px-4 py-3 h-auto transition-all duration-200 ${selectedTab === "buy"
                   ? "text-white shadow-lg border border-slate-600"
                   : "text-slate-300 hover:text-white hover:bg-slate-600/50 border border-transparent"
@@ -55,7 +58,7 @@ export function DashboardHeader() {
             </Button>
             <Button
               variant="ghost"
-              onClick={() => setSelectedTab("transactions")}
+              onClick={() => onTabChange("transactions")}
               className={`rounded-full px-4 py-3 h-auto transition-all duration-200 ${selectedTab === "transactions"
                   ? "text-white shadow-lg border border-slate-600"
                   : "text-slate-300 hover:text-white hover:bg-slate-600/50 border border-transparent"

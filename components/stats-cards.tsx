@@ -1,60 +1,62 @@
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
 
-export function StatsCards() {
+interface StatsCardsProps {
+  currentFundPrice?: string
+  youWillReceive?: string
+  yourBalance?: string
+  rewardsRate?: string
+}
+
+export function StatsCards({ 
+  currentFundPrice = "$1.00",
+  youWillReceive = "1000 Share", 
+  yourBalance = "$8,560",
+  rewardsRate = "1000 Share"
+}: StatsCardsProps) {
   const stats = [
     {
       title: "Current Fund Price Per",
-      value: "$1.00",
+      value: currentFundPrice,
       icon: "/images/Frame (1).png",
-      gradient: "from-emerald-500/20 to-cyan-500/20",
-      border: "border-emerald-500/30",
-    },
-     {
-      title: "Your Balance",
-      value: "$8,560",
-      icon: "/images/Group (1).png",
-      gradient: "from-blue-500/20 to-purple-500/20",
-      border: "border-blue-500/30",
     },
     {
       title: "You Will Receive",
-      value: "1000 Share",
+      value: youWillReceive,
       icon: "/images/Frame.png",
-      gradient: "from-cyan-500/20 to-blue-500/20",
-      border: "border-cyan-500/30",
+    },
+    {
+      title: "Your Balance",
+      value: yourBalance,
+      icon: "/images/Group (1).png",
     },
     {
       title: "Rewards Rate",
-      value: "1000 Share",
+      value: rewardsRate,
       icon: "/images/Group.png",
-      gradient: "from-purple-500/20 to-pink-500/20",
-      border: "border-purple-500/30",
     },
   ]
 
 return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[14px]">
       {stats.map((stat, index) => (
         <Card
           key={index}
           className={`
             relative overflow-hidden 
-            p-6 
+            px-6 py-[30px]
             rounded-xl 
-            w-full h-[125px]
+            w-full
             backdrop-blur-[34px]
-            border-0
+            border-0 
+        shadow-[0px_4px_10px_0px_rgba(5,11,32,0.36),2px_4px_14px_0px_rgba(0,255,221,0.6)_inset]
           `}
           style={{
-            background: "linear-gradient(130deg, #0F2B2A 0%, #1A4A47 50%, #0F2B2A 100%)",
-            boxShadow: `
-              0 0 20px rgba(20, 184, 166, 0.3),
-              0 0 40px rgba(20, 184, 166, 0.1),
-              inset 0 1px 0 rgba(20, 184, 166, 0.2),
-              inset 0 -1px 0 rgba(20, 184, 166, 0.1)
-            `,
-            border: "1px solid rgba(20, 184, 166, 0.2)"
+            background:
+              "linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 255, 241, 0.1) 95.47%)",
+            borderImageSource:
+              "linear-gradient(207.74deg, rgba(48, 139, 164, 0.6) 16.89%, rgba(0, 7, 15, 0) 85.16%)",
+            borderImageSlice: 1,
           }}
         >
           {/* Glow effect overlay */}
@@ -67,32 +69,22 @@ return (
           
           {/* Content */}
           <div className="relative flex items-start justify-between h-full z-10">
-            <div>
-              <p className="text-gray-300 text-sm font-medium mb-2">{stat.title}</p>
+            <div className="flex flex-col gap-2">
+              <p className="text-white text-sm font-normal">{stat.title}</p>
               <p 
-                className="text-3xl font-bold mt-1"
-                style={{ color: "#14B8A6" }}
+                className="text-[32px] font-normal text-[#0FEDBE] leading-[100%]"
               >
                 {stat.value}
               </p>
             </div>
-            <div 
-              className="p-3 rounded-lg flex items-center justify-center"
-              style={{
-                background: "rgba(20, 184, 166, 0.1)",
-                border: "1px solid rgba(20, 184, 166, 0.3)",
-                boxShadow: "0 0 10px rgba(20, 184, 166, 0.2)"
-              }}
-            >
+
               <Image
                 src={stat.icon}
                 alt={stat.title}
-                width={48}
-                height={48}
+                width={66}
+                height={66}
                 className="object-contain"
-                style={{ filter: "drop-shadow(0 0 8px rgba(20, 184, 166, 0.4))" }}
               />
-            </div>
           </div>
         </Card>
       ))}
