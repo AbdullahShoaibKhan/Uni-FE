@@ -8,8 +8,11 @@ export function TransactionsTab() {
   const transactions = [
     {
       coin: "Bitcoin",
-      icon: "₿",
-      iconColor: "text-orange-400",
+      icon:(
+        <div className="w-6 h-6 ">
+          <img src="/images/BTC.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       date: "12 Jun, 2025",
       amount: "$5,240",
       shares: "0.36",
@@ -19,7 +22,11 @@ export function TransactionsTab() {
     },
     {
       coin: "Litecoin",
-      icon: "Ł",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/LTC.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-gray-400",
       date: "15 Jul, 2025",
       amount: "$5,240",
@@ -30,7 +37,11 @@ export function TransactionsTab() {
     },
     {
       coin: "Doge Coin",
-      icon: "Ð",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/DOGE.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-yellow-400",
       date: "17 Jul, 2025",
       amount: "$5,240",
@@ -41,8 +52,11 @@ export function TransactionsTab() {
     },
     {
       coin: "SHIB",
-      icon: "🐕",
-      iconColor: "text-orange-400",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/ETH.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       date: "21 Aug, 2025",
       amount: "$5,240",
       shares: "15",
@@ -52,7 +66,11 @@ export function TransactionsTab() {
     },
     {
       coin: "Litecoin",
-      icon: "Ł",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/LTC.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-gray-400",
       date: "21 Aug, 2025",
       amount: "$5,240",
@@ -63,7 +81,11 @@ export function TransactionsTab() {
     },
     {
       coin: "Bitcoin",
-      icon: "₿",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/BTC.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-orange-400",
       date: "21 Aug, 2025",
       amount: "$5,240",
@@ -74,7 +96,11 @@ export function TransactionsTab() {
     },
     {
       coin: "SHIB",
-      icon: "🐕",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/SHIB.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-orange-400",
       date: "21 Aug, 2025",
       amount: "$5,240",
@@ -85,8 +111,11 @@ export function TransactionsTab() {
     },
     {
       coin: "Doge Coin",
-      icon: "Ð",
-      iconColor: "text-yellow-400",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/DOGE.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       date: "21 Aug, 2025",
       amount: "$5,240",
       shares: "15",
@@ -96,8 +125,11 @@ export function TransactionsTab() {
     },
     {
       coin: "SHIB",
-      icon: "🐕",
-      iconColor: "text-orange-400",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/SHIB.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       date: "21 Aug, 2025",
       amount: "$5,240",
       shares: "15",
@@ -197,11 +229,21 @@ export function TransactionsTab() {
               </Card>
             ))}
           </div>
-          <Card className=" bg-transparent border border-[#308BA499] backdrop-blur-[94px]"
-                style={{
-                  background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)'
-                }}
+          <Card className="relative bg-transparent border-none backdrop-blur-[94px]"
+            style={{
+              background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)'
+            }}
           >
+            <div
+              className="absolute inset-0 rounded-[12px]"
+              style={{
+                background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
+                padding: '1px',
+                mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                maskComposite: 'xor',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+              }}></div>
             <div className="flex items-center justify-between mb-[18px] p-4">
               <h3 className="text-white font-normal text-[20px]">Track all your fund purchases, rewards, and withdraws in real time</h3>
               <div className="flex items-center gap-1">
@@ -241,7 +283,7 @@ export function TransactionsTab() {
                       <td className="py-4">{transaction.shares}</td>
                       <td className="py-4">{transaction.fundValue}</td>
                       <td className="py-4">
-                        <span className="text-green-400">{transaction.status}</span>
+                        <span className="text-[#0FEDBE]">{transaction.status}</span>
                       </td>
                       <td className="py-4">{transaction.txHash}</td>
                     </tr>
@@ -270,12 +312,22 @@ export function TransactionsTab() {
             "
             style={{
               background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)',
-           backgroundImage: 'url(/images/InsightBG.png)',
-           backgroundSize: 'cover',
-           backgroundPosition: 'center',
-           backgroundRepeat: 'no-repeat',
+              backgroundImage: 'url(/images/AI.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
             }}
           >
+            <div
+              className="absolute inset-0 rounded-[12px]"
+              style={{
+                background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
+                padding: '1px',
+                mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                maskComposite: 'xor',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+              }}></div>
             <div className="relative z-10">
               <h3 className="text-white font-semibold text-[20px] mb-[30px]">AI Insights</h3>
 
@@ -283,11 +335,15 @@ export function TransactionsTab() {
                 {/* Insights */}
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-[14px]">
-                    <div className="w-6 h-6 rounded-full bg-green-400"></div>
+                    <div className="w-6 h-6 rounded-full">
+                      <img src="/images/CheckGreen.png" alt="Check Green" className="w-full h-full object-cover object-center" />
+                    </div>
                     <p className="text-white text-sm">You've averaged $1,041 per buy order</p>
                   </div>
                   <div className="flex items-center gap-[14px]">
-                  <div className="w-6 h-6 rounded-full bg-green-400"></div>
+                    <div className="w-6 h-6 rounded-full">
+                      <img src="/images/CheckGreen.png" alt="Check Green" className="w-full h-full object-cover object-center" />
+                    </div>
                     <p className="text-white text-sm">You Latest buy was $200 on 15/04/2025</p>
                   </div>
                 </div>
@@ -296,11 +352,21 @@ export function TransactionsTab() {
           </Card>
 
           {/* Next Projected Withdraws Eligibility */}
-          <Card className="bg-slate-800/50 border border-[#308BA499] p-[30px] h-fit backdrop-blur-[94px]"
-          style={{
-            background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)'
-          }}
+          <Card className="relative bg-slate-800/50 border-none p-[30px] h-fit backdrop-blur-[94px]"
+            style={{
+              background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)'
+            }}
           >
+            <div
+              className="absolute inset-0 rounded-[12px]"
+              style={{
+                background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
+                padding: '1px',
+                mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                maskComposite: 'xor',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+              }}></div>
             <div className="text-left">
               <h3 className="text-white font-normal text-[20px] mb-2">Next projected withdraws eligibility on 12/05/2025</h3>
               <p className="text-[#0FEDBE] text-sm"></p>

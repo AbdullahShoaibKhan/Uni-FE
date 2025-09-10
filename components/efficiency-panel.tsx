@@ -26,13 +26,29 @@ export function EfficiencyPanel() {
         relative 
         p-6 h-full
         rounded-[12px] 
-        border 
-        border-[#308BA499]
+        border-none
         bg-transparent
         overflow-hidden 
         backdrop-blur-[94px]
       "
+      style={{
+        backgroundImage: 'url(/images/Efficiency.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
+            <div
+        className="absolute inset-0 rounded-[12px]"
+        style={{
+          background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
+          padding: '1px',
+          mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          maskComposite: 'xor',
+          WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          WebkitMaskComposite: 'xor',
+        }}
+      />
       <div className="relative z-10">
         <h3 className="text-white font-semibold text-[20px] mb-[32px]">Efficiency Metrics</h3>
         <div className="flex flex-col gap-[22px]">

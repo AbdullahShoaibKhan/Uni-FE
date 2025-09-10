@@ -18,22 +18,22 @@ export function StatsCards({
     {
       title: "Current Fund Price Per",
       value: currentFundPrice,
-      icon: "/images/Frame (1).png",
+      icon: "/images/CurrentFundPrice.png",
     },
     {
       title: "You Will Receive",
       value: youWillReceive,
-      icon: "/images/Frame.png",
+      icon: "/images/YouRecieve.png",
     },
     {
       title: "Your Balance",
       value: yourBalance,
-      icon: "/images/Group (1).png",
+      icon: "/images/YOurBalance.png",
     },
     {
       title: "Rewards Rate",
       value: rewardsRate,
-      icon: "/images/Group.png",
+      icon: "/images/RewardRates.png",
     },
   ]
 

@@ -5,7 +5,11 @@ export function RecentPayouts() {
   const payouts = [
     {
       coin: "Bitcoin",
-      icon: "₿",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/BTC.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-orange-400",
       date: "12 Jun, 2025",
       amount: "$5,240",
@@ -14,7 +18,11 @@ export function RecentPayouts() {
     },
     {
       coin: "Litecoin",
-      icon: "Ł",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/LTC.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-gray-400",
       date: "15 Jul, 2025",
       amount: "$5,240",
@@ -23,7 +31,11 @@ export function RecentPayouts() {
     },
     {
       coin: "Doge Coin",
-      icon: "Ð",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/DOGE.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-yellow-400",
       date: "17 Jul, 2025",
       amount: "$5,240",
@@ -32,7 +44,11 @@ export function RecentPayouts() {
     },
     {
       coin: "SHIB",
-      icon: "🐕",
+      icon: (
+        <div className="w-6 h-6 ">
+          <img src="/images/SHIB.png" alt="ETH" className="w-full h-full object-cover object-center" />
+        </div>
+      ),
       iconColor: "text-orange-400",
       date: "21 Aug, 2025",
       amount: "$5,240",
@@ -74,7 +90,7 @@ export function RecentPayouts() {
                 <td className="py-4 ">{payout.amount}</td>
                 <td className="py-4 ">{payout.qty}</td>
                 <td className="py-4">
-                  <span className="text-green-400 ">{payout.status}</span>
+                  <span className="text-[#0FEDBE] ">{payout.status}</span>
                 </td>
               </tr>
             ))}
