@@ -18,8 +18,8 @@ export function DashboardHeader({ selectedTab, onTabChange }: DashboardHeaderPro
       <div className="flex items-center justify-between">
         {/* Left Section - Logo and Title */}
         <div className="flex items-center space-x-4">
-          <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-white">
-            <img src="/images/logo.png" alt="logo" className="w-full h-full object-cover object-center" />
+          <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-white" style={{backgroundColor: 'transparent'}}>
+            <img src="/images/Group 1707488843.png" alt="logo" className="w-full h-full object-cover object-center" />
           </div>
           <div className="flex items-center gap-2">
             <h1 className="text-white font-semibold text-2xl">Mining Dashboard</h1>
