@@ -14,6 +14,8 @@ export function InsightsPanel() {
         shadow-[0px_4px_10px_0px_rgba(5,11,32,0.36),2px_4px_14px_0px_rgba(0,255,221,0.6)_inset]
       "
       style={{
+        backgroundImage: 'url("/images/tester.jpeg")',
+
         background:
           "linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 255, 241, 0.1) 95.47%)",
         borderImageSource:

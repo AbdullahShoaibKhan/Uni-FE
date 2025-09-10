@@ -6,19 +6,16 @@ export function EfficiencyPanel() {
     {
       label: "Hashrate",
       value: "1.25PH/s",
-      icon: Zap,
       color: "text-cyan-400",
     },
     {
       label: "Machines Online",
       value: "0.12 JGH",
-      icon: Monitor,
       color: "text-green-400",
     },
     {
       label: "Efficiency",
       value: "0.12 JGH",
-      icon: Gauge,
       color: "text-yellow-400",
     },
   ]
@@ -36,6 +33,8 @@ export function EfficiencyPanel() {
         shadow-[0px_4px_10px_0px_rgba(5,11,32,0.36),2px_4px_14px_0px_rgba(0,255,221,0.6)_inset]
       "
       style={{
+        backgroundImage: 'url("/images/tester.jpeg")',
+
         background:
           "linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 255, 241, 0.1) 95.47%)",
         borderImageSource:
@@ -63,16 +62,36 @@ export function EfficiencyPanel() {
 
         <div className="space-y-4">
           {metrics.map((metric, index) => {
-            const IconComponent = metric.icon
+            // const IconComponent = metric.icon
             return (
               <div key={index} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-lg bg-slate-700/50">
-                    <IconComponent className="w-5 h-5 text-slate-200" />
-                  </div>
-                  <span className="text-slate-400 text-sm">{metric.label}</span>
+             
+                  <span style={{
+                    color: "#FFFFFF",
+                    fontFamily: "Figtree, sans-serif",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: "16px",
+                    lineHeight: "100%",
+                    letterSpacing: "0px",
+                    textAlign: "right",
+                  }}>{metric.label}</span>
                 </div>
-                <span className={`font-bold ${metric.color}`}>{metric.value}</span>
+                <span
+                  style={{
+                    color: "#0FEDBE",
+                    fontFamily: "Figtree, sans-serif",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: "15px",
+                    lineHeight: "100%",
+                    letterSpacing: "0px",
+                    textAlign: "right",
+                  }}
+                >
+                  {metric.value}
+                </span>
               </div>
             )
           })}

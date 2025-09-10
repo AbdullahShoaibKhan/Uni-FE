@@ -9,7 +9,7 @@ import { RecentPayouts } from "@/components/recent-payouts"
 export default function DashboardPage() {
   return (
 
-    <div className="min-h-screen bg-slate-900 text-white" style={{backgroundImage: 'url("/images/bg-image.jpeg")', backgroundSize: 'cover'}}>
+    <div className="min-h-screen bg-slate-900 text-white" style={{ backgroundImage: 'url("/images/bg-image.jpeg")', backgroundSize: 'cover' }}>
       <div className="flex flex-col mx-auto max-w-7xl">
         <DashboardHeader />
 
@@ -20,19 +20,22 @@ export default function DashboardPage() {
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-2" >
             {/* Purchase Form - 7 columns */}
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-7">
               <PurchaseForm />
             </div>
 
-            {/* Insights Panel - 2 columns */}
-            <div className="lg:col-span-2" style={{border: 'none'}}>
-              <InsightsPanel />
-            </div>
+            <div className="lg:col-span-5 grid grid-cols-1 lg:grid-cols-2 gap-2">
+              <div className="lg:col-span-1">
+                <InsightsPanel />
+              </div>
 
-            {/* Efficiency Panel - 2 columns */}
-            <div className="lg:col-span-2">
-              <EfficiencyPanel />
+              {/* Efficiency Panel - 2 columns */}
+              <div className="lg:col-span-1">
+                <EfficiencyPanel />
+              </div>
             </div>
+            {/* Insights Panel - 2 columns */}
+
           </div>
 
           {/* Bottom Section */}
