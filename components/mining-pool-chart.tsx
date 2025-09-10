@@ -35,7 +35,6 @@ export function MiningPoolChart() {
 
   return (
     <Card className="bg-slate-800/50 border-slate-700 p-6 col-span-5" >
-      <h3 className="text-white font-semibold text-lg mb-6">Mining Pool Distribution</h3>
 
       <div className="relative z-10">
         <h3 className="text-white font-semibold text-lg mb-6">Mining Pool Distribution</h3>
