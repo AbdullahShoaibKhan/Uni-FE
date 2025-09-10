@@ -41,7 +41,7 @@ export function PurchaseForm() {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="bg-slate-800 border-slate-700">
-                <SelectItem value="usdt">USDT</SelectItem>
+                <SelectItem value="usdt" style={{backgroundColor:'#0A2636'}}>USDT</SelectItem>
                 <SelectItem value="usd">USD</SelectItem>
               </SelectContent>
             </Select>
