@@ -39,7 +39,7 @@ export function BuyTab() {
       </div>
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
         <MiningPoolChart />
         <RecentPayouts />
       </div>
