@@ -42,39 +42,39 @@ export function RecentPayouts() {
   ]
 
   return (
-    <Card className="bg-slate-800/50 border-slate-700 p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-white font-semibold text-lg">Recent Payouts</h3>
-        <Button variant="ghost" className="text-cyan-400 hover:text-cyan-300 hover:bg-slate-700">
+    <Card className="bg-slate-800/50 border border-[#308BA499] py-6 col-span-7" >
+      <div className="flex items-center justify-between mb-6 px-6">
+        <h3 className="text-white font-semibold text-[20px]">Recent Payouts</h3>
+        <p className="text-[#0FEDBE] hover:text-cyan-300 font-medium text-base">
           View All
-        </Button>
+        </p>
       </div>
 
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-slate-700">
-              <th className="text-left text-slate-400 text-sm font-medium pb-3">Coins</th>
-              <th className="text-left text-slate-400 text-sm font-medium pb-3">Date</th>
-              <th className="text-left text-slate-400 text-sm font-medium pb-3">Amount</th>
-              <th className="text-left text-slate-400 text-sm font-medium pb-3">Qty</th>
-              <th className="text-left text-slate-400 text-sm font-medium pb-3">Status</th>
+            <tr className="border-b border-slate-700 bg-[#39597D33]">
+              <th className="text-left text-white text-sm font-normal py-3 px-6">Coins</th>
+              <th className="text-left text-white text-sm font-normal py-3 ">Date</th>
+              <th className="text-left text-white text-sm font-normal py-3 ">Amount</th>
+              <th className="text-left text-white text-sm font-normal py-3 ">Qty</th>
+              <th className="text-left text-white text-sm font-normal py-3 ">Status</th>
             </tr>
           </thead>
           <tbody>
             {payouts.map((payout, index) => (
-              <tr key={index} className="border-b border-slate-800/50">
-                <td className="py-4">
+              <tr key={index} className="border-b border-slate-800/70 py-3 text-sm font-normal text-white">
+                <td className="py-4 px-6">
                   <div className="flex items-center space-x-3">
                     <span className={`text-lg ${payout.iconColor}`}>{payout.icon}</span>
                     <span className="text-white font-medium">{payout.coin}</span>
                   </div>
                 </td>
-                <td className="py-4 text-slate-300">{payout.date}</td>
-                <td className="py-4 text-white font-semibold">{payout.amount}</td>
-                <td className="py-4 text-slate-300">{payout.qty}</td>
+                <td className="py-4">{payout.date}</td>
+                <td className="py-4 ">{payout.amount}</td>
+                <td className="py-4 ">{payout.qty}</td>
                 <td className="py-4">
-                  <span className="text-green-400 text-sm font-medium">{payout.status}</span>
+                  <span className="text-green-400 ">{payout.status}</span>
                 </td>
               </tr>
             ))}

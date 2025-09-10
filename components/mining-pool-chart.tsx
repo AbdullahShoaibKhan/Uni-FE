@@ -34,26 +34,8 @@ export function MiningPoolChart() {
   ]
 
   return (
-    <Card 
-      className="
-        relative 
-        p-6 
-        h-[400px] 
-        rounded-[12px] 
-        border 
-        overflow-hidden 
-        backdrop-blur-[94px]
-        shadow-[0px_4px_10px_0px_rgba(5,11,32,0.36),2px_4px_14px_0px_rgba(0,255,221,0.6)_inset]
-      "
-      style={{
-        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)",
-        borderImageSource:
-          "linear-gradient(207.74deg, rgba(48, 139, 164, 0.6) 16.89%, rgba(0, 7, 15, 0) 85.16%)",
-        borderImageSlice: 1,
-      }}
-    >
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5" />
+    <Card className="bg-slate-800/50 border-slate-700 p-6 col-span-5" >
+      <h3 className="text-white font-semibold text-lg mb-6">Mining Pool Distribution</h3>
 
       <div className="relative z-10">
         <h3 className="text-white font-semibold text-lg mb-6">Mining Pool Distribution</h3>
