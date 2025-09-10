@@ -130,22 +130,22 @@ export function TransactionsTab() {
               {
                 title: "Total Purchases",
                 value: statsData.totalPurchases,
-                icon: "/images/Frame (1).png",
+                icon: "/images/TotalPurchases.png",
               },
               {
                 title: "Total Withdraws",
                 value: statsData.totalWithdraws,
-                icon: "/images/Frame.png",
+                icon: "/images/TotalWithdraws.png",
               },
               {
                 title: "Net Balance",
                 value: statsData.netBalance,
-                icon: "/images/Group (1).png",
+                icon: "/images/NetBalance.png",
               },
               {
                 title: "Transactions",
                 value: statsData.transactions,
-                icon: "/images/Group.png",
+                icon: "/images/Transactions.png",
               },
             ].map((stat, index) => (
               <Card
