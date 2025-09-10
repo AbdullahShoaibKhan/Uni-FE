@@ -124,8 +124,8 @@ export function TransactionsTab() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
 
         {/* Transactions Table - 7 columns */}
-        <div className="lg:col-span-9 flex flex-col gap-2">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[14px]">
+        <div className="lg:col-span-9 flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
             {[
               {
                 title: "Total Purchases",
@@ -197,14 +197,18 @@ export function TransactionsTab() {
               </Card>
             ))}
           </div>
-          <Card className="bg-slate-800/50 border border-[#308BA499] py-6">
-            <div className="flex items-center justify-between mb-6 px-6">
-              <h3 className="text-white font-semibold text-[20px]">Track all your fund purchases, rewards, and withdraws in real time</h3>
-              <div className="flex items-center gap-3">
-                <select className="bg-slate-700 border border-slate-600 text-white px-3 py-1 rounded text-sm">
+          <Card className=" bg-transparent border border-[#308BA499] backdrop-blur-[94px]"
+                style={{
+                  background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)'
+                }}
+          >
+            <div className="flex items-center justify-between mb-[18px] p-4">
+              <h3 className="text-white font-normal text-[20px]">Track all your fund purchases, rewards, and withdraws in real time</h3>
+              <div className="flex items-center gap-1">
+                <select className="border-none text-white backdrop-blur-3xl bg-white/10 p-4 rounded-[8px] text-sm h-[49px] w-[135px]">
                   <option>All</option>
                 </select>
-                <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 text-sm">
+                <Button variant="outline" className="border-none text-white backdrop-blur-3xl bg-white/10 rounded-[8px]  font-normal text-sm p-4 h-[49px]">
                   Download CSV File
                 </Button>
               </div>
@@ -254,39 +258,37 @@ export function TransactionsTab() {
           <Card
             className="
               relative 
-              p-6 h-full
+              p-[30px] h-full
               rounded-[12px] 
-              border 
-              border-[#308BA499]
+              border-none
               bg-transparent
               overflow-hidden 
               backdrop-blur-[94px]
+              bg-cover
+              bg-center
+              bg-no-repeat
             "
+            style={{
+              background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)',
+           backgroundImage: 'url(/images/InsightBG.png)',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
+           backgroundRepeat: 'no-repeat',
+            }}
           >
             <div className="relative z-10">
-              <h3 className="text-white font-semibold text-[20px] mb-[32px]">AI Insights</h3>
+              <h3 className="text-white font-semibold text-[20px] mb-[30px]">AI Insights</h3>
 
-              <div className="space-y-6">
+              <div className="flex flex-col gap-3">
                 {/* Insights */}
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <div className="flex flex-col gap-6">
+                  <div className="flex items-center gap-[14px]">
+                    <div className="w-6 h-6 rounded-full bg-green-400"></div>
                     <p className="text-white text-sm">You've averaged $1,041 per buy order</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="flex items-center gap-[14px]">
+                  <div className="w-6 h-6 rounded-full bg-green-400"></div>
                     <p className="text-white text-sm">You Latest buy was $200 on 15/04/2025</p>
-                  </div>
-                </div>
-
-                {/* AI Chatbot Visual */}
-                <div className="mt-6 relative">
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg p-4 border border-slate-600">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-[#0FEDBE] mb-2">Ai</div>
-                      <div className="text-xs text-slate-400 mb-3">Command Prompt</div>
-                      <div className="w-full h-8 bg-slate-700 rounded border border-slate-600"></div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -294,10 +296,14 @@ export function TransactionsTab() {
           </Card>
 
           {/* Next Projected Withdraws Eligibility */}
-          <Card className="bg-slate-800/50 border border-[#308BA499] p-6">
-            <div className="text-center">
-              <h3 className="text-white font-semibold text-[16px] mb-2">Next projected withdraws eligibility</h3>
-              <p className="text-[#0FEDBE] text-sm">on 12/05/2025</p>
+          <Card className="bg-slate-800/50 border border-[#308BA499] p-[30px] h-fit backdrop-blur-[94px]"
+          style={{
+            background: 'background: linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)'
+          }}
+          >
+            <div className="text-left">
+              <h3 className="text-white font-normal text-[20px] mb-2">Next projected withdraws eligibility on 12/05/2025</h3>
+              <p className="text-[#0FEDBE] text-sm"></p>
             </div>
           </Card>
         </div>
