@@ -15,34 +15,34 @@ export function BuyTab() {
   }
 
   return (
-    <main className=" py-8 flex flex-col gap-3 w-full">
+    <div className="py-2 sm:py-4 flex flex-col gap-3 sm:gap-4 w-full">
       {/* Stats Cards Grid */}
       <StatsCards {...statsData} />
 
       {/* Main Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
         {/* Purchase Form - 7 columns */}
         <div className="lg:col-span-7">
           <PurchaseForm />
         </div>
 
-        <div className="lg:col-span-5 grid grid-cols-1 lg:grid-cols-2 gap-2">
-          <div className="lg:col-span-1">
+        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+          <div className="col-span-1">
             <InsightsPanel />
           </div>
 
           {/* Efficiency Panel - 2 columns */}
-          <div className="lg:col-span-1">
+          <div className="col-span-1">
             <EfficiencyPanel />
           </div>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <MiningPoolChart />
         <RecentPayouts />
       </div>
-    </main>
+    </div>
   )
 }

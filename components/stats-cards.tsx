@@ -38,18 +38,18 @@ export function StatsCards({
   ]
 
 return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[14px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-[14px]">
       {stats.map((stat, index) => (
         <Card
           key={index}
           className={`
             relative overflow-hidden 
-            px-6 py-[30px]
+            px-4 sm:px-6 py-4 sm:py-[30px]
             rounded-xl 
             w-full
             backdrop-blur-[34px]
             border-0 
-        shadow-[0px_4px_10px_0px_rgba(5,11,32,0.36),2px_4px_14px_0px_rgba(0,255,221,0.6)_inset]
+            shadow-[0px_4px_10px_0px_rgba(5,11,32,0.36),2px_4px_14px_0px_rgba(0,255,221,0.6)_inset]
           `}
           style={{
             background:
@@ -63,16 +63,16 @@ return (
           <div 
             className="absolute inset-0 rounded-xl opacity-30"
             style={{
-              background: "radial-gradient(ellipse at top, rgba(20, 184, 166, 0.15) 0%, transparent 70%)"
+              background: "radial-gradient(ellipse at right, rgba(20, 184, 166, 0.15) 0%, transparent 90%)"
             }}
           />
           
           {/* Content */}
           <div className="relative flex items-start justify-between h-full z-10">
-            <div className="flex flex-col gap-2">
-              <p className="text-white text-sm font-normal">{stat.title}</p>
+            <div className="flex flex-col gap-1 sm:gap-2 flex-1 min-w-0">
+              <p className="text-white text-xs sm:text-sm font-normal leading-tight">{stat.title}</p>
               <p 
-                className="text-[32px] font-normal text-[#0FEDBE] leading-[100%]"
+                className="text-xl sm:text-2xl lg:text-[32px] font-normal text-[#0FEDBE] leading-[100%]"
               >
                 {stat.value}
               </p>
@@ -83,7 +83,7 @@ return (
                 alt={stat.title}
                 width={66}
                 height={66}
-                className="object-contain"
+                className="object-contain w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 flex-shrink-0"
               />
           </div>
         </Card>

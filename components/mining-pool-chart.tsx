@@ -31,10 +31,9 @@ export function MiningPoolChart() {
       dotColor: "bg-yellow-400"
     },
   ]
-
   return (
     <Card
-      className="relative bg-transparent border-none p-6 col-span-5 backdrop-blur-[94px]"
+      className="relative bg-transparent border-none p-4 sm:p-6 lg:col-span-5 backdrop-blur-[94px]"
       style={{
         background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)',
       }}
@@ -54,13 +53,13 @@ export function MiningPoolChart() {
       <div className="relative z-10">
 
 
-        <div className="grid grid-cols-2 gap-8 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 h-full">
           {/* Left Section - Cryptocurrency Cards in 2x2 Grid */}
           <div className="w-full">
-            <h3 className="text-white font-semibold text-[20px] mb-6">Mining Pool Distribution</h3>
-            <div className="grid grid-cols-2 gap-3">
+            <h3 className="text-white font-semibold text-base sm:text-lg lg:text-[20px] mb-4 sm:mb-6">Mining Pool Distribution</h3>
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {/* BTC */}
-              <div className="relative p-4 rounded-lg bg-slate-800/30 overflow-hidden"
+              <div className="relative p-3 sm:p-4 lg:p-6 rounded-lg bg-slate-800/30 overflow-hidden"
                 style={{
                   background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 164, 255, 0.1) 95.47%)',
                 }}
@@ -76,15 +75,15 @@ export function MiningPoolChart() {
                     WebkitMaskComposite: 'xor',
                   }}
                 />
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#0FEDBE] shadow-lg" />
-                  <div className="text-white font-normal text-sm">{poolData[0].name}</div>
-                  <div className="text-2xl font-bold text-[#0FEDBE]">{poolData[0].percentage}%</div>
+                <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-3">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#0FEDBE] shadow-lg" />
+                  <div className="text-white font-normal text-xs sm:text-sm">{poolData[0].name}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#0FEDBE]">{poolData[0].percentage}%</div>
                 </div>
               </div>
 
               {/* KAS */}
-              <div className="relative p-4 rounded-lg bg-slate-800/30 overflow-hidden"
+              <div className="relative p-3 sm:p-4 lg:p-6 rounded-lg bg-slate-800/30 overflow-hidden"
                 style={{
                   background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 164, 255, 0.1) 95.47%)',
                 }}
@@ -100,15 +99,15 @@ export function MiningPoolChart() {
                     WebkitMaskComposite: 'xor',
                   }}
                 />
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#95FF85] shadow-lg" />
-                  <div className="text-white font-medium text-sm">{poolData[1].name}</div>
-                  <div className="text-2xl font-bold text-[#0FEDBE]">{poolData[1].percentage}%</div>
+                <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-3">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#95FF85] shadow-lg" />
+                  <div className="text-white font-medium text-xs sm:text-sm">{poolData[1].name}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#0FEDBE]">{poolData[1].percentage}%</div>
                 </div>
               </div>
 
               {/* DOGE */}
-              <div className="relative p-4 rounded-lg bg-slate-800/30 overflow-hidden"
+              <div className="relative p-3 sm:p-4 lg:p-6 rounded-lg bg-slate-800/30 overflow-hidden"
                 style={{
                   background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 164, 255, 0.1) 95.47%)',
                 }}
@@ -124,15 +123,15 @@ export function MiningPoolChart() {
                     WebkitMaskComposite: 'xor',
                   }}
                 />
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#FFA93F] shadow-lg" />
-                  <div className="text-white font-medium text-sm">{poolData[2].name}</div>
-                  <div className="text-2xl font-bold text-[#0FEDBE]">{poolData[2].percentage}%</div>
+                <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-3">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#FFA93F] shadow-lg" />
+                  <div className="text-white font-medium text-xs sm:text-sm">{poolData[2].name}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#0FEDBE]">{poolData[2].percentage}%</div>
                 </div>
               </div>
 
               {/* LTC */}
-              <div className="relative p-4 rounded-lg bg-slate-800/30 overflow-hidden"
+              <div className="relative p-3 sm:p-4 lg:p-6 rounded-lg bg-slate-800/30 overflow-hidden"
                 style={{
                   background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 164, 255, 0.1) 95.47%)',
                 }}
@@ -148,10 +147,10 @@ export function MiningPoolChart() {
                     WebkitMaskComposite: 'xor',
                   }}
                 />
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#FBFF79] shadow-lg" />
-                  <div className="text-white font-medium text-sm">{poolData[3].name}</div>
-                  <div className="text-2xl font-bold text-[#0FEDBE]">{poolData[3].percentage}%</div>
+                <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-3">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#FBFF79] shadow-lg" />
+                  <div className="text-white font-medium text-xs sm:text-sm">{poolData[3].name}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#0FEDBE]">{poolData[3].percentage}%</div>
                 </div>
               </div>
             </div>
@@ -159,7 +158,7 @@ export function MiningPoolChart() {
 
           {/* Right Section - Donut Chart */}
           <div className="flex items-center justify-center w-full">
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-48 sm:h-64 lg:h-full">
               {/* Donut Chart */}
               <svg className="w-full h-full" viewBox="0 0 200 200">
                 {/* Background circle */}
@@ -227,8 +226,8 @@ export function MiningPoolChart() {
 
               {/* Center Circle and Text */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24  rounded-full flex items-center justify-center">
-                  <span className="text-white text-3xl font-normal">100%</span>
+                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xl sm:text-2xl lg:text-3xl font-normal">100%</span>
                 </div>
               </div>
             </div>
