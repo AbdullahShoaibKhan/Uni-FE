@@ -60,8 +60,8 @@ export function RecentPayouts() {
   return (
     <Card className="        
         relative 
-        pt-4 sm:pt-6 lg:pt-[30px] h-full
-        rounded-[12px] 
+        pt-4 lg:pt-6 2xl:pt-[30px] h-full
+        rounded-[10px] 2xl:rounded-[12px] 
         border-none
         bg-transparent
         overflow-hidden 
@@ -70,7 +70,7 @@ export function RecentPayouts() {
         "
     >
       <div
-        className="absolute inset-0 rounded-[12px] pointer-events-none"
+        className="absolute inset-0 rounded-[10px] 2xl:rounded-[12px] pointer-events-none"
         style={{
           background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
           padding: '1px',
@@ -80,9 +80,9 @@ export function RecentPayouts() {
           WebkitMaskComposite: 'xor',
         }}
       />
-      <div className="flex items-center justify-between mb-4 sm:mb-6 px-4 sm:px-6">
-        <h3 className="text-white font-semibold text-base sm:text-lg lg:text-[20px]">Recent Payouts</h3>
-        <p className="text-[#0FEDBE] hover:text-cyan-300 font-medium text-sm sm:text-base">
+      <div className="flex items-center justify-between mb-4 lg:mb-6 px-4 lg:px-6 2xl:px-6">
+        <h3 className="text-white font-semibold text-base lg:text-lg 2xl:text-[20px]">Recent Payouts</h3>
+        <p className="text-[#0FEDBE] hover:text-cyan-300 font-medium text-sm lg:text-base 2xl:text-lg">
           View All
         </p>
       </div>
@@ -91,26 +91,26 @@ export function RecentPayouts() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-slate-700 bg-[#39597D33]">
-              <th className="text-left text-white text-xs sm:text-sm lg:text-base font-normal py-2 sm:py-3 px-3 sm:px-6">Coins</th>
-              <th className="text-left text-white text-xs sm:text-sm lg:text-base font-normal py-2 sm:py-3 hidden sm:table-cell">Date</th>
-              <th className="text-left text-white text-xs sm:text-sm lg:text-base font-normal py-2 sm:py-3">Amount</th>
-              <th className="text-left text-white text-xs sm:text-sm lg:text-base font-normal py-2 sm:py-3 hidden md:table-cell">Qty</th>
-              <th className="text-left text-white text-xs sm:text-sm lg:text-base font-normal py-2 sm:py-3">Status</th>
+              <th className="text-left text-white text-xs lg:text-sm 2xl:text-base font-normal py-2 sm:py-3 px-3 lg:px-6 2xl:px-6">Coins</th>
+              <th className="text-left text-white text-xs lg:text-sm 2xl:text-base font-normal py-2 sm:py-3 hidden sm:table-cell ">Date</th>
+              <th className="text-left text-white text-xs lg:text-sm 2xl:text-base font-normal py-2 sm:py-3 ">Amount</th>
+              <th className="text-left text-white text-xs lg:text-sm 2xl:text-base font-normal py-2 sm:py-3 hidden md:table-cell">Qty</th>
+              <th className="text-left text-white text-xs lg:text-sm 2xl:text-base font-normal py-2 sm:py-3 ">Status</th>
             </tr>
           </thead>
           <tbody>
             {payouts.map((payout, index) => (
-              <tr key={index} className="border-b border-slate-800/70 py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-normal text-white">
-                <td className="pt-3 sm:pt-[22px] pb-3 sm:pb-5 px-3 sm:px-6">
+              <tr key={index} className="border-b border-slate-800/70 py-2 sm:py-3 text-xs lg:text-xs xl:text-sm 2xl:text-base font-normal text-white">
+                <td className="pt-3 lg:pt-4 2xl:pt-[22px] pb-3 sm:pb-5 px-3 lg:px-6 2xl:px-6">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <span className={`text-sm sm:text-lg ${payout.iconColor}`}>{payout.icon}</span>
+                    <span className={`text-sm lg:text-lg 2xl:text-xl ${payout.iconColor}`}>{payout.icon}</span>
                     <span className="text-white font-medium">{payout.coin}</span>
                   </div>
                 </td>
-                <td className="pt-3 sm:pt-[22px] pb-3 sm:pb-5 hidden sm:table-cell">{payout.date}</td>
-                <td className="pt-3 sm:pt-[22px] pb-3 sm:pb-5">{payout.amount}</td>
-                <td className="pt-3 sm:pt-[22px] pb-3 sm:pb-5 hidden md:table-cell">{payout.qty}</td>
-                <td className="pt-3 sm:pt-[22px] pb-3 sm:pb-5">
+                <td className="pt-3 lg:pt-4 2xl:pt-[22px] pb-3 lg:pb-4 2xl:pb-5 hidden sm:table-cell">{payout.date}</td>
+                <td className="pt-3 lg:pt-4 2xl:pt-[22px] pb-3 lg:pb-4 2xl:pb-5">{payout.amount}</td>
+                <td className="pt-3 lg:pt-4 2xl:pt-[22px] pb-3 lg:pb-4 2xl:pb-5 hidden md:table-cell">{payout.qty}</td>
+                <td className="pt-3 lg:pt-4 2xl:pt-[22px] pb-3 lg:pb-4 2xl:pb-5">
                   <span className="text-[#0FEDBE]">{payout.status}</span>
                 </td>
               </tr>

@@ -24,8 +24,8 @@ export function EfficiencyPanel() {
     <Card
       className="
         relative 
-        px-4 sm:px-6 py-4 sm:py-6 lg:py-[30px] h-full
-        rounded-[12px] 
+        px-4 lg:px-5 2xl:px-6 py-4 lg:py-6 2xl:py-[30px] h-full
+        rounded-[10px] 2xl:rounded-[12px] 
         border-none
         bg-transparent
         overflow-hidden 
@@ -39,7 +39,7 @@ export function EfficiencyPanel() {
       }}
     >
       <div
-        className="absolute inset-0 rounded-[12px]"
+        className="absolute inset-0 rounded-[10px] 2xl:rounded-[12px]"
         style={{
           background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
           padding: '1px',
@@ -50,15 +50,15 @@ export function EfficiencyPanel() {
         }}
       />
       <div className="relative z-10">
-        <h3 className="text-white font-semibold text-base sm:text-lg lg:text-[20px] mb-4 sm:mb-6 lg:mb-[32px]">Efficiency Metrics</h3>
-        <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+        <h3 className="text-white font-semibold text-base lg:text-base xl:text-xl 2xl:text-[20px] mb-4 lg:mb-6 2xl:mb-[32px]">Efficiency Metrics</h3>
+        <div className="flex flex-col gap-3 lg:gap-4 2xl:gap-5">
           {metrics.map((metric, index) => {
             // const IconComponent = metric.icon
             return (
               <div key={index} className="flex items-center justify-between">
-                <span className="text-white font-normal text-sm sm:text-base">{metric.label}</span>
+                <span className="text-white font-normal text-sm lg:text-xs xl:text-sm 2xl:text-base">{metric.label}</span>
                 <span
-                  className="font-normal text-base sm:text-lg lg:text-[20px] text-[#0FEDBE]"
+                  className="font-normal text-base lg:text-lg xl:text-xl 2xl:text-2xl text-[#0FEDBE]"
                 >
                   {metric.value}
                 </span>

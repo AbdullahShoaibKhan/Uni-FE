@@ -22,7 +22,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen text-white" style={{ backgroundImage: 'url("/images/bg-image.jpeg")', backgroundSize: 'cover' }}>
-      <div className="flex flex-col mx-auto max-w-[1900px] w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 3xl:px-[50px]">
+      <div className="flex flex-col mx-auto max-w-[1900px] w-full px-4 sm:px-6 md:px-8 lg:px-[25px] xl:px-[35px] 2xl:px-[40px] 3xl:px-[50px]">
         <DashboardHeader selectedTab={selectedTab} onTabChange={setSelectedTab} />
         {renderTabContent()}
       </div>

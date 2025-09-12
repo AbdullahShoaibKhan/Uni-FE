@@ -33,14 +33,14 @@ export function MiningPoolChart() {
   ]
   return (
     <Card
-      className="relative bg-transparent border-none p-4 sm:p-6 lg:col-span-5 backdrop-blur-[94px]"
+      className="relative bg-transparent border-none p-4 lg:p-5 2xl:p-6 lg:col-span-5 backdrop-blur-[94px]"
       style={{
         background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.15) 24.9%, rgba(85, 224, 255, 0.15) 95.47%)',
       }}
 
     >
       <div
-        className="absolute inset-0 rounded-[12px]"
+        className="absolute inset-0 rounded-[10px] 2xl:rounded-[12px]"
         style={{
           background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
           padding: '1px',
@@ -56,16 +56,16 @@ export function MiningPoolChart() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 h-full">
           {/* Left Section - Cryptocurrency Cards in 2x2 Grid */}
           <div className="w-full">
-            <h3 className="text-white font-semibold text-base sm:text-lg lg:text-[20px] mb-4 sm:mb-6">Mining Pool Distribution</h3>
+            <h3 className="text-white font-semibold text-base lg:text-lg 2xl:text-[20px] mb-4 lg:mb-6 2xl:mb-[32px]">Mining Pool Distribution</h3>
             <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {/* BTC */}
-              <div className="relative p-3 sm:p-4 lg:p-6 rounded-lg bg-slate-800/30 overflow-hidden"
+              <div className="relative p-3 lg:p-4 2xl:p-6 rounded-[10px] 2xl:rounded-lg bg-slate-800/30 overflow-hidden"
                 style={{
                   background: 'linear-gradient(282.85deg, rgba(31, 55, 81, 0.1) 24.9%, rgba(85, 164, 255, 0.1) 95.47%)',
                 }}
               >
                 <div
-                  className="absolute inset-0 rounded-lg"
+                  className="absolute inset-0 rounded-[10px] 2xl:rounded-lg"
                   style={{
                     background: 'linear-gradient(155.32deg, rgba(48, 139, 164, 0.6) 3.41%, rgba(0, 7, 15, 0) 75.52%)',
                     padding: '1px',
@@ -75,7 +75,7 @@ export function MiningPoolChart() {
                     WebkitMaskComposite: 'xor',
                   }}
                 />
-                <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-3">
+                <div className="relative z-10 flex flex-col items-center gap-2 lg:gap-3 2xl:gap-4">
                   <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#0FEDBE] shadow-lg" />
                   <div className="text-white font-normal text-xs sm:text-sm">{poolData[0].name}</div>
                   <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#0FEDBE]">{poolData[0].percentage}%</div>

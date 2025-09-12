@@ -44,8 +44,8 @@ return (
           key={index}
           className={`
             relative overflow-hidden 
-            px-4 sm:px-6 py-4 sm:py-[30px]
-            rounded-xl 
+            px-4 lg:px-5 2xl:px-6 py-4 lg:py-[25px] 2xl:py-[30px]
+            rounded-[10px] 2xl:rounded-[12px] 
             w-full
             backdrop-blur-[34px]
             border-0 
@@ -70,9 +70,9 @@ return (
           {/* Content */}
           <div className="relative flex items-start justify-between h-full z-10">
             <div className="flex flex-col gap-1 sm:gap-2 flex-1 min-w-0">
-              <p className="text-white text-xs sm:text-sm font-normal leading-tight">{stat.title}</p>
+              <p className="text-white text-xs lg:text-[13px] 2xl:text-sm font-normal leading-tight">{stat.title}</p>
               <p 
-                className="text-xl sm:text-2xl lg:text-[32px] font-normal text-[#0FEDBE] leading-[100%]"
+                className="text-xl lg:text-2xl xl:text-[28px] 2xl:text-[32px] font-normal text-[#0FEDBE] leading-[100%]"
               >
                 {stat.value}
               </p>
@@ -83,7 +83,7 @@ return (
                 alt={stat.title}
                 width={66}
                 height={66}
-                className="object-contain w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 flex-shrink-0"
+                className="object-contain w-8 h-8 lg:w-12 lg:h-12 2xl:w-16 2xl:h-16 flex-shrink-0"
               />
           </div>
         </Card>

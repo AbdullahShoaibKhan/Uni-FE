@@ -15,7 +15,7 @@ export function BuyTab() {
   }
 
   return (
-    <div className="py-2 sm:py-4 flex flex-col gap-3 sm:gap-4 w-full">
+    <div className="py-2 lg:py-3 2xl:py-4 flex flex-col gap-2 lg:gap-3 2xl:gap-4 w-full">
       {/* Stats Cards Grid */}
       <StatsCards {...statsData} />
 
